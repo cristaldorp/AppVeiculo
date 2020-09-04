@@ -1,0 +1,14 @@
+<resources>
+    <!-- String Botões -->
+    <string name="app_name">AppVeiculo</string>
+    <string name="Add_Novo">Adicionar Novo Veiculo</string>
+    <string name="Salvar_novo">Salvar Novo Veiculo</string>
+    <string name="Listar">Listar Veiculos</string>
+
+    <!-- String Campos -->
+    <string name="Titulo">Dados do Veiculo</string>
+    <string name="NomeVeiculo">Nome: </string>
+    <string name="PlacaVeiculo">Placa: </string>
+    <string name="AnoVeiculo">Ano: </string>
+    <string name="CorVeiculo">Cor: </string>
+</resources>
