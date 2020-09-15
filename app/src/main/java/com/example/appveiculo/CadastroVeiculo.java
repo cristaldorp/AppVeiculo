@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.domain.Veiculo;
-import com.example.domain.DAO;
+import com.example.domain.VeiculoDAO;
 
 public class CadastroVeiculo extends AppCompatActivity {
 
@@ -36,8 +36,8 @@ public class CadastroVeiculo extends AppCompatActivity {
         veiculo.setCor(cor.getText().toString());
         veiculo.setAno(Integer.parseInt(ano.getText().toString()));
 
-        DAO.SalvarDados(veiculo);
-        System.out.println(DAO.getListaDados());
+        VeiculoDAO.SalvarDados(veiculo);
+        System.out.println(VeiculoDAO.getListaDados());
         finish();
 
     }

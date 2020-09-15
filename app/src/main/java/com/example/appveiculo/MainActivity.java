@@ -9,16 +9,25 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.domain.DAO;
+import com.example.bd.BancoDados;
+import com.example.domain.BancoDAO;
+import com.example.domain.VeiculoDAO;
 
 public class MainActivity extends AppCompatActivity {
 
     private ListView ListagemVeiculo;
-
+    private BancoDAO bancoDAO;
+    private BancoDados bancoDados;
+    private VeiculoDAO veiculoDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        bancoDados = new BancoDados(this);
+        veiculoDAO = new VeiculoDAO(bancoDados.getWritableDatabase());
+
+
+
         setContentView(R.layout.activity_main);
         ListagemVeiculo = findViewById(R.id.lista_veiculo);
         atualizaLista();
@@ -38,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void atualizaLista(){
+
         ArrayAdapter listar = new ArrayAdapter
-                (this, R.layout.support_simple_spinner_dropdown_item, DAO.getListaDados());
+                (this, R.layout.support_simple_spinner_dropdown_item, bancoDAO.getVeiculos());
 
         ListagemVeiculo.setAdapter(listar);
 

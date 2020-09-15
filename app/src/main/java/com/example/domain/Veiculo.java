@@ -1,10 +1,19 @@
 package com.example.domain;
 
 public class Veiculo {
+    private Integer id;
     private String nome;
     private String placa;
     private String cor;
     private int ano;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

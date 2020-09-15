@@ -3,9 +3,9 @@ package com.example.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAO {
+public class VeiculoDAO {
     private static List<Veiculo> dados = new ArrayList<>();
-    private DAO(){
+    private VeiculoDAO(){
 
     }
     public static void SalvarDados(Veiculo veiculo){
